@@ -87,6 +87,7 @@
 // app.listen(port, () => {
 //   console.log(`Server running on http://localhost:${port}`);
 // });
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const dataRoutes = require('../routes/dataRoutes');
@@ -100,8 +101,11 @@ app.use(cors()); // Allow all domains to access the API
 // Middleware to parse JSON bodies
 app.use(express.json()); // This is needed to parse JSON request bodies
 // MongoDB connection
+const mongoUri = process.env.MONGO_URI;
 mongoose
-  .connect('mongodb://localhost:27017/fletNix', {
+  .connect(
+    //'mongodb://localhost:27017/fletNix'
+    mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
