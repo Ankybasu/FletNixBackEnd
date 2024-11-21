@@ -101,7 +101,7 @@ app.use(cors()); // Allow all domains to access the API
 // Middleware to parse JSON bodies
 app.use(express.json()); // This is needed to parse JSON request bodies
 // MongoDB connection
-const mongoUri = process.env.MONGO_URI;
+const mongoUri = process.env.MONGODB_URI;
 mongoose
   .connect(
     //'mongodb://localhost:27017/fletNix'
