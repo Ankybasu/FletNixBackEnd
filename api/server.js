@@ -102,7 +102,7 @@ app.use(
   cors({
     origin:'https://uifletnix-anky-basus-projects.vercel.app/',
     credentials: true, // Allow credentials
-    origin: 'http://localhost:4200', // Replace with your frontend URL
+    // origin: 'http://localhost:4200', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
