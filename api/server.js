@@ -100,9 +100,9 @@ const cors = require('cors');  // Import the cors module
 // app.use(cors()); // Allow all domains to access the API
 app.use(
   cors({
-    origin:true,
+   // origin:true,
     credentials: true, // Allow credentials
-    //origin: 'http://localhost:4200', // Replace with your frontend URL
+    origin: 'http://localhost:4200', // Replace with your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
