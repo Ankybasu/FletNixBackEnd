@@ -97,16 +97,14 @@ const authRoutes = require('../routes/authRoutes'); // Import the authRoutes
 const port = 3000;
 const cors = require('cors');  // Import the cors module
 // Enable CORS for all origins (can be customized)
-// app.use(cors()); // Allow all domains to access the API
-app.use(
-  cors({
-   // origin:true,
-    credentials: true, // Allow credentials
-    origin: 'http://localhost:4200', // Replace with your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-);
+app.use(cors()); // Allow all domains to access the API
+// app.use(
+//   cors({
+//     origin: 'http://localhost:4200', // Replace with your frontend URL
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//   })
+// );
 // Middleware to parse JSON bodies
 app.use(express.json()); // This is needed to parse JSON request bodies
 // MongoDB connection
