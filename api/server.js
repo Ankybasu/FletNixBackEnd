@@ -12,7 +12,7 @@ const cors = require('cors');  // Import the cors module
 const allowedOrigins = [
   'https://uifletnix-anky-basus-projects.vercel.app', // Frontend production URL
   'https://fletnixx.vercel.app',// Local development
-  'https://your-other-app.example.com' // Add more as needed
+  'http://localhost:4200'
 ];
 
 // Configure CORS with dynamic origin handling
